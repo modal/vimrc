@@ -6,7 +6,6 @@ set softtabstop=4
 set expandtab
 "set guifont=Courier\ New
 set guifont=DejaVu_Sans_Mono:h9:cANSI
-"USE Envy Code R font if needing Drawing
 set textwidth=80
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
@@ -41,7 +40,7 @@ endif
 "Completion
 "set completefunc = true
 "set omnifunc = true
-
+"
 "File Type Autocmd
 autocmd FileType make     set noexpandtab
 

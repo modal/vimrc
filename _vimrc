@@ -1,3 +1,10 @@
+
+"Keep a copy of this on github.com
+"Commit change locally
+"git commit _vimrc -m "minor edit"
+"Push to github.com
+"git push origin master
+
 set nocompatible
 set cindent
 set shiftwidth=4

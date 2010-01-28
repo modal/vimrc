@@ -5,6 +5,8 @@
 "Push to github.com
 "git push origin master
 
+"Make sure to cover WINDOWS and LINUX
+
 set nocompatible
 set cindent
 set shiftwidth=4

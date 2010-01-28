@@ -14,7 +14,8 @@ set expandtab
 "set guifont=Courier\ New
 set guifont=DejaVu_Sans_Mono:h9:cANSI
 set textwidth=80
-source $VIMRUNTIME/vimrc_example.vim
+":digraphs to this other characters not normally enter with keyboard
+source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 colorscheme vividchalk "skittles_dark wombat torte ron
@@ -34,7 +35,7 @@ filetype plugin on
 
 set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 
-"Project Vim
+"Project Vim Plugin
 "use vimgrep
 if !exists('g:proj_flags')
     if has("win32") || has("mac")
@@ -88,14 +89,27 @@ endif
 set nobackup
 set nowritebackup
 
+"KEY MAPPING
 "Type :map to display all mappings
 vnoremap <Left> h
 vnoremap <Right> l
 vnoremap <Up> k
 vnoremap <Down> j
 
+"For literals must press ctrl+v in insert mode then type
+"exampe for enter ctrl+v then press enter
+"Map Control Up and Control Down to do buffer previous and next
+nmap <C-up> :bprev
+nmap <C-down> :bnext
+
+"QuickList
+nmap <C-left> :cprevious
+nmap <C-right> :cnext
+
+
 map <F5> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
+map <F7> :make
 
 "Turn ON Line Numbering
 set number
@@ -106,11 +120,29 @@ hi LineNr guifg=white guibg=black ctermfg=yellow ctermbg=black
 "syntax match Tab /\t/
 "hi Tab gui=underline guifg=green guibg=blue  ctermbg=blue
 
+"Highlight Trailing Spaces
+"highlight TrailingSpaces ctermbg=grey guibg=grey
+"match TrailingSpaces /\s\+$/
+
 set wildmenu
+
+"Make
+"Compile program with gcc
+"set makeprg=gcc \test.c
+"Using mingw make
+"set makeprg=C:\MinGW\bin\mingw32-make 
+
 
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables
 let g:yankring_history_dir = expand('$VIM\dump') 
+
+"NERDTree
+"let NERDTreeShowBookmarks=1
+
+"ShowMarks
+"Disable Show Marks 
+let g:showmarks_enable=0 
 
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 function! s:RunShellCommand(cmdline)

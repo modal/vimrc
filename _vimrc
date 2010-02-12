@@ -4,6 +4,15 @@
 "git commit _vimrc -m "minor edit"
 "Push to github.com
 "git push origin master
+"Alternatively
+"git push git@github.com:modal/vimrc.git
+"
+"SETTING UP GIT
+"
+"git config github.user modal
+"git config github.token TOKENPROVIDEDBYGITHUB
+"
+"MUST ALSO SET UP SSH KEYS
 
 "Make sure to cover WINDOWS and LINUX
 

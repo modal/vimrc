@@ -88,8 +88,13 @@ if has('win32')
   endfunction
 endif
 
+"No Backup 
 set nobackup
 set nowritebackup
+
+"Backup with backup directory pointing to $VIM/backups
+"set backup
+"set backupdir=$VIM/backups
 
 "KEY MAPPING
 "Type :map to display all mappings
@@ -108,6 +113,9 @@ nmap <C-down> :bnext
 nmap <C-left> :cprevious
 nmap <C-right> :cnext
 
+"To grab entire words above or below in insert mode
+"inoremap <C-Y> <Esc>klyiWjpa
+"inoremap <C-E> <Esc>jlyiWkPa 
 
 map <F5> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
@@ -134,6 +142,8 @@ set wildmenu
 "Using mingw make
 "set makeprg=C:\MinGW\bin\mingw32-make 
 
+"Write as sudo on linux/unix
+":w !sudo tee %
 
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables

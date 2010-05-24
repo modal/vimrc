@@ -13,6 +13,7 @@
 "git config github.token TOKENPROVIDEDBYGITHUB
 "
 "MUST ALSO SET UP SSH KEYS
+"http://help.github.com/msysgit-key-setup/
 
 "Make sure to cover WINDOWS and LINUX
 

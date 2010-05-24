@@ -23,19 +23,27 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 "set guifont=Courier\ New
-set guifont=DejaVu_Sans_Mono:h9:cANSI
+"set guifont=DejaVu_Sans_Mono:h9:cANSI
+set guifont=Consolas:h9:cANSI
 set textwidth=80
 ":digraphs to this other characters not normally enter with keyboard
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
-colorscheme vividchalk "skittles_dark wombat torte ron
+colorscheme ego
+"manuscript candyman vividchalk "skittles_dark wombat torte ron
 set hidden  "What does it do again?
+
+"initial window width
+set columns=95
 
 set guioptions-=T       "Tool bar
 "set guioptions-=m "get rid of menu bar
 
 set laststatus=2 "Always display status bar
+
+"Auto Reload _vimrc on modification
+au! BufWritePost _vimrc source %
 
 "Load up register c and z for yank, del, and paste with "+ reg
 let @c="\"+yy"
@@ -43,6 +51,9 @@ let @x="\"+dd"
 let @z="\"+p"
 
 filetype plugin on
+"Not sure how the next 2 work
+"filetype on
+"filetype indent on
 
 set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 
@@ -96,6 +107,22 @@ if has('win32')
     endif
   endfunction
 endif
+
+"Execute python file being edit with 
+"Make this an auto??? based on *.py or *.pyw extension
+map <buffer> <S-e> :w<CR>:!python % <CR>
+"linux/unix
+"map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+
+"Swap File Recovery Steps
+"1. r # at the prompt hit "r" to recover the swap file
+"2. :sav! /tmp/%
+"3. :vs
+"4. :diffthis
+"5. CTRL-W_l
+"6. :bp
+"7. e # at the prompt hit "e" to edit anyway
+"8. :diffthis
 
 "No Backup 
 set nobackup
@@ -157,6 +184,8 @@ set wildmenu
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables
 let g:yankring_history_dir = expand('$VIM\dump') 
+
+"MiniBufExplorer (NOT USED)
 
 "NERDTree
 "let NERDTreeShowBookmarks=1
@@ -225,4 +254,19 @@ function ToggleHex()
   let &readonly=l:oldreadonly
   let &modifiable=l:oldmodifiable
 endfunction
+
+"Close Pairs
+":inoremap ( ()<ESC>i
+":inoremap ) <c-r>=ClosePair(')')<CR>
+":inoremap { {}<ESC>i
+":inoremap } <c-r>=ClosePair('}')<CR>
+":inoremap [ []<ESC>i
+":inoremap ] <c-r>=ClosePair(']')<CR>
+"function ClosePair(char)
+"  if getline('.')[col('.') - 1] == a:char
+"	  return "<Right>"
+"  else
+"    return a:char
+"  endif
+"endf
 

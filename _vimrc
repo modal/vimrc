@@ -7,7 +7,9 @@
 "Alternatively
 "git push git@github.com:modal/vimrc.git
 "
-"SETTING UP GIT
+"?????How do set up origin master????????
+"
+""SETTING UP GIT
 "
 "git config github.user modal
 "git config github.token TOKENPROVIDEDBYGITHUB
@@ -16,6 +18,9 @@
 "http://help.github.com/msysgit-key-setup/
 
 "Make sure to cover WINDOWS and LINUX
+
+"Updating helptags after adding doc files
+"helptags $vim\vimfiles\doc
 
 set nocompatible
 set cindent
@@ -31,8 +36,9 @@ set textwidth=80
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
-colorscheme ego
-"manuscript candyman vividchalk "skittles_dark wombat torte ron
+colorscheme bluechia 
+"darkBlue ego manuscript candyman vividchalk "skittles_dark wombat torte ron
+"nevfn
 set hidden  "What does it do again?
 
 "initial window width
@@ -110,10 +116,13 @@ if has('win32')
 endif
 
 "Execute python file being edit with 
-"Make this an auto??? based on *.py or *.pyw extension
-map <buffer> <S-e> :w<CR>:!python % <CR>
+"Make this an autocmd based on *.py or *.pyw extension
+"Original, replaces existing <S-e> usage
+"map <buffer> <S-e> :w<CR>:!python % <CR>
+autocmd FileType python   map <buffer> <S-e> :w<CR>:!python % <CR>
 "linux/unix
 "map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+"autocmd FileType python   map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 "Swap File Recovery Steps
 "1. r # at the prompt hit "r" to recover the swap file

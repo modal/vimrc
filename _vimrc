@@ -22,35 +22,64 @@
 "Updating helptags after adding doc files
 "helptags $vim\vimfiles\doc
 
+"Use <SID> to mark maps to detemine where mapping changed.
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vimscript information
+":help vim-script-info
+"http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 set cindent
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
+"UNICODE FULL SUPPORT FOR DejaVu, Code2000, and Unifont
+"http://en.wikipedia.org/wiki/List_of_typefaces#Unicode_fonts
 "set guifont=Courier\ New
-"set guifont=DejaVu_Sans_Mono:h9:cANSI
-set guifont=Consolas:h9:cANSI
+set guifont=DejaVu_Sans_Mono:h10:cANSI
+"set guifont=Consolas:h10:cANSI
+"set guifont=BitStream_Vera_Sans_Mono:h9:cANSI
+set printfont=Consolas:h8:cANSI
 set textwidth=80
 ":digraphs to this other characters not normally enter with keyboard
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
-colorscheme bluechia 
+colorscheme codeblocks_dark
 "darkBlue ego manuscript candyman vividchalk "skittles_dark wombat torte ron
+"bluechia inkpot tango blackboard
 "nevfn
 set hidden  "What does it do again?
 
 "initial window width
-set columns=95
+set columns=110
 
-set guioptions-=T       "Tool bar
+set guioptions-=T       "get rid of Tool bar
+set guioptions+=c     "console dialogs instead of popups for simple choices
 "set guioptions-=m "get rid of menu bar
+
+"Turn on column highlighting
+"set cursorcolumn
 
 set laststatus=2 "Always display status bar
 
+" Make command line two lines high
+"set ch=2
+
+" These commands open folds
+"set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
+
 "Auto Reload _vimrc on modification
 au! BufWritePost _vimrc source %
+
+"Edit vimrc
+nmap <silent> \ev :e $MYVIMRC<CR>
+
+"Source vimrc
+"nmap <silent> \sv :so $MYVIMRC<CR>
 
 "Load up register c and z for yank, del, and paste with "+ reg
 let @c="\"+yy"
@@ -62,7 +91,13 @@ filetype plugin on
 "filetype on
 "filetype indent on
 
+"Turn on syntax highlighting
+syntax on
+
 set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
+
+" Set the status line the way I like it (Derek Wyatt)
+"set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 
 "Project Vim Plugin
 "use vimgrep
@@ -73,6 +108,9 @@ if !exists('g:proj_flags')
         let g:proj_flags='imstb'            " Project default flags for everything else
     endif
 endif
+
+"Don't update the display while executing macros
+set lazyredraw
 
 "Completion
 "set completefunc = true
@@ -94,6 +132,12 @@ autocmd FileType make     set noexpandtab
 "  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
 "  silent execute '!$VIM\vim72\diff.exe' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
 "endfunction
+
+"Display Hidden Characters
+"http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes
+set encoding=utf-8
+set list
+set listchars=tab:▶\ ,eol:★
 
 if has('win32')
   set diffexpr=MyDiff()
@@ -124,6 +168,15 @@ autocmd FileType python   map <buffer> <S-e> :w<CR>:!python % <CR>
 "map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 "autocmd FileType python   map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
+"
+"
+if has('autocmd')
+    autocmd BufEnter *.otl set filetype=outline
+endif
+
+" cd to the directory containing the file in the buffer
+nmap  \lcd :lcd %:h<CR>
+
 "Swap File Recovery Steps
 "1. r # at the prompt hit "r" to recover the swap file
 "2. :sav! /tmp/%
@@ -144,10 +197,10 @@ set nowritebackup
 
 "KEY MAPPING
 "Type :map to display all mappings
-vnoremap <Left> h
-vnoremap <Right> l
-vnoremap <Up> k
-vnoremap <Down> j
+vnoremap <SID><Left> h
+vnoremap <SID><Right> l
+vnoremap <SID><Up> k
+vnoremap <SID><Down> j
 
 "For literals must press ctrl+v in insert mode then type
 "exampe for enter ctrl+v then press enter
@@ -163,6 +216,8 @@ nmap <C-right> :cnext
 "inoremap <C-Y> <Esc>klyiWjpa
 "inoremap <C-E> <Esc>jlyiWkPa 
 
+" map F5 to display all lines with keyword under cursor and ask which one to
+" jump to
 map <F5> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 map <F7> :make
@@ -191,9 +246,13 @@ set wildmenu
 "Write as sudo on linux/unix
 ":w !sudo tee %
 
+"Remapping F11,  might want to add -R option
+nnoremap <silent> <F10> :!ctags *.h *.c *.cxx *.cpp *.asm *.a51<CR>
+
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables
 let g:yankring_history_dir = expand('$VIM\dump') 
+nnoremap <silent> <F11> :YRShow<CR>
 
 "MiniBufExplorer (NOT USED)
 
@@ -225,10 +284,10 @@ function! s:RunShellCommand(cmdline)
 endfunction
 
 " ex command for toggling hex mode - define mapping if desired
-command -bar Hexmode call ToggleHex()
+command! -bar Hexmode call ToggleHex()
 
 " helper function to toggle hex mode
-function ToggleHex()
+function! ToggleHex()
   " hex mode should be considered a read-only operation
   " save values for modified and read-only for restoration later,
   " and clear the read-only flag for now
@@ -265,6 +324,16 @@ function ToggleHex()
   let &modifiable=l:oldmodifiable
 endfunction
 
+" toggle between number and relative number on \tn
+"nnoremap <leader>tn :call ToggleRelativeAbsoluteNumber()<CR>
+function! ToggleRelativeAbsoluteNumber()
+  if &number
+    set relativenumber
+  else
+    set number
+  endif
+endfunction
+
 "Close Pairs
 ":inoremap ( ()<ESC>i
 ":inoremap ) <c-r>=ClosePair(')')<CR>
@@ -280,3 +349,22 @@ endfunction
 "  endif
 "endf
 
+
+"Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+"map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+
+"map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+"\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+"\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+"Work Based Maps
+nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
+"Added APC and HUB

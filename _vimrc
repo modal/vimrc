@@ -38,6 +38,7 @@ set softtabstop=4
 set expandtab
 "UNICODE FULL SUPPORT FOR DejaVu, Code2000, and Unifont
 "http://en.wikipedia.org/wiki/List_of_typefaces#Unicode_fonts
+"http://dejavu-fonts.org
 "set guifont=Courier\ New
 set guifont=DejaVu_Sans_Mono:h10:cANSI
 "set guifont=Consolas:h10:cANSI
@@ -49,8 +50,8 @@ source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 colorscheme codeblocks_dark
-"darkBlue ego manuscript candyman vividchalk "skittles_dark wombat torte ron
-"bluechia inkpot tango blackboard
+"darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
+"bluechia inkpot tango blackboard codeblocks_dark
 "nevfn
 set hidden  "What does it do again?
 
@@ -98,6 +99,8 @@ set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 
 " Set the status line the way I like it (Derek Wyatt)
 "set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
+set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]\ %y
+
 
 "Project Vim Plugin
 "use vimgrep
@@ -108,6 +111,11 @@ if !exists('g:proj_flags')
         let g:proj_flags='imstb'            " Project default flags for everything else
     endif
 endif
+
+if has("win32")
+    let Tlist_Ctags_Cmd = 'c:\ctags\ctags.exe'
+endif
+
 
 "Don't update the display while executing macros
 set lazyredraw
@@ -135,6 +143,7 @@ autocmd FileType make     set noexpandtab
 
 "Display Hidden Characters
 "http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes
+"http://www.joelonsoftware.com/articles/Unicode.html
 set encoding=utf-8
 set list
 set listchars=tab:▶\ ,eol:★
@@ -164,6 +173,8 @@ endif
 "Original, replaces existing <S-e> usage
 "map <buffer> <S-e> :w<CR>:!python % <CR>
 autocmd FileType python   map <buffer> <S-e> :w<CR>:!python % <CR>
+"autocmd FileType ruby   map <buffer> <S-e> :w<CR>:!ruby % <CR>
+autocmd FileType ruby   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!ruby % <CR>
 "linux/unix
 "map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 "autocmd FileType python   map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>

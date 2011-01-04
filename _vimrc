@@ -14,6 +14,8 @@
 "git config github.user modal
 "git config github.token TOKENPROVIDEDBYGITHUB
 "
+"GIT Reference Site => gitref.org
+"
 "MUST ALSO SET UP SSH KEYS
 "http://help.github.com/msysgit-key-setup/
 

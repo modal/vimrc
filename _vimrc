@@ -234,6 +234,8 @@ nmap <C-right> :cnext
 "To grab entire words above or below in insert mode
 "inoremap <C-Y> <Esc>klyiWjpa
 "inoremap <C-E> <Esc>jlyiWkPa 
+"Remove spaces and tabs at end of lines
+nmap <F2> :%s/\s\+$//gc
 
 " map F5 to display all lines with keyword under cursor and ask which one to
 " jump to

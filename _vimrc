@@ -272,7 +272,8 @@ set wildmenu
 ":w !sudo tee %
 
 "Remapping F11,  might want to add -R option
-nnoremap <silent> <F10> :!ctags *.h *.c *.cxx *.cpp *.asm *.a51<CR>
+"nnoremap <silent> <F10> :!ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<CR>
+nnoremap <silent> <F10> :!start /min ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<CR>
 
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables

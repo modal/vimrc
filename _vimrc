@@ -135,6 +135,10 @@ set lazyredraw
 "File Type Autocmd
 autocmd FileType make     set noexpandtab
 
+"C autocmd
+"auto add #ifndef block
+au! BufNewFile *.c,*.cpp,*.h :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endifO
+
 "set diffexpr=MyDiff()
 "function MyDiff()
 "  let opt = '-a --binary '

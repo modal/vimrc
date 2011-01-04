@@ -63,8 +63,8 @@ if(&columns < 100)
 endif
 
 set guioptions-=T       "get rid of Tool bar
-set guioptions+=c     "console dialogs instead of popups for simple choices
-"set guioptions-=m "get rid of menu bar
+set guioptions+=c       "console dialogs instead of popups for simple choices
+set guioptions-=m       "get rid of menu bar
 
 "Turn on column highlighting
 "set cursorcolumn

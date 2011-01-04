@@ -180,7 +180,7 @@ if has('win32')
   endfunction
 endif
 
-"Execute python file being edit with 
+"Execute python file being edit with
 "Make this an autocmd based on *.py or *.pyw extension
 "Original, replaces existing <S-e> usage
 "map <buffer> <S-e> :w<CR>:!python % <CR>
@@ -210,7 +210,7 @@ nmap  \lcd :lcd %:h<CR>
 "7. e # at the prompt hit "e" to edit anyway
 "8. :diffthis
 
-"No Backup 
+"No Backup
 set nobackup
 set nowritebackup
 
@@ -237,7 +237,8 @@ nmap <C-right> :cnext
 
 "To grab entire words above or below in insert mode
 "inoremap <C-Y> <Esc>klyiWjpa
-"inoremap <C-E> <Esc>jlyiWkPa 
+"inoremap <C-E> <Esc>jlyiWkPa
+
 "Remove spaces and tabs at end of lines
 nmap <F2> :%s/\s\+$//gc
 
@@ -266,7 +267,7 @@ set wildmenu
 "Compile program with gcc
 "set makeprg=gcc \test.c
 "Using mingw make
-"set makeprg=C:\MinGW\bin\mingw32-make 
+"set makeprg=C:\MinGW\bin\mingw32-make
 
 "Write as sudo on linux/unix
 ":w !sudo tee %
@@ -277,7 +278,7 @@ nnoremap <silent> <F10> :!start /min ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<
 
 "GLOBAL PLUGIN VARIABLES
 "Yankring.vim Variables
-let g:yankring_history_dir = expand('$VIM\dump') 
+let g:yankring_history_dir = expand('$VIM\dump')
 nnoremap <silent> <F11> :YRShow<CR>
 
 "MiniBufExplorer (NOT USED)
@@ -287,8 +288,8 @@ nnoremap <silent> <F11> :YRShow<CR>
 map <leader>nt  :NERDTreeToggle<CR>
 
 "ShowMarks
-"Disable Show Marks 
-let g:showmarks_enable=0 
+"Disable Show Marks
+let g:showmarks_enable=0
 
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 function! s:RunShellCommand(cmdline)
@@ -371,7 +372,7 @@ endfunction
 ":inoremap ] <c-r>=ClosePair(']')<CR>
 "function ClosePair(char)
 "  if getline('.')[col('.') - 1] == a:char
-"	  return "<Right>"
+"     return "<Right>"
 "  else
 "    return a:char
 "  endif
@@ -406,4 +407,3 @@ nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 
 
 
-"Added APC and HUB

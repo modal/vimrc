@@ -380,4 +380,12 @@ endfunc
 
 "Work Based Maps
 nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
+
+"Turn on cursor line highlight, which highlights the current selected line
+"set cursorline
+"hi clear CursorLine
+"hi CursorLine gui=underline
+
+
+
 "Added APC and HUB

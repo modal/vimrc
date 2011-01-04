@@ -393,6 +393,9 @@ endfunc
 "\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 "\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+"Make link (html)
+nmap <leader>ml I<a href=A></a>F>
+
 "Work Based Maps
 nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 

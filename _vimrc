@@ -352,6 +352,7 @@ endfunction
 
 " toggle between number and relative number on \tn
 "nnoremap <leader>tn :call ToggleRelativeAbsoluteNumber()<CR>
+map <F9> :call ToggleRelativeAbsoluteNumber()<CR>
 function! ToggleRelativeAbsoluteNumber()
   if &number
     set relativenumber

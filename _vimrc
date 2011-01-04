@@ -284,6 +284,7 @@ nnoremap <silent> <F11> :YRShow<CR>
 
 "NERDTree
 "let NERDTreeShowBookmarks=1
+map <leader>nt  :NERDTreeToggle<CR>
 
 "ShowMarks
 "Disable Show Marks 

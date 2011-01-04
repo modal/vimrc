@@ -69,6 +69,10 @@ set guioptions-=m       "get rid of menu bar
 "Turn on column highlighting
 "set cursorcolumn
 
+"Enables coloring of specific columns
+"set colorcolumn=80      "40, 80
+"hi ColorColumn
+
 set laststatus=2 "Always display status bar
 
 " Make command line two lines high

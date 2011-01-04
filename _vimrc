@@ -58,7 +58,9 @@ colorscheme codeblocks_dark
 set hidden  "What does it do again?
 
 "initial window width
-set columns=110
+if(&columns < 100)
+    set columns=110
+endif
 
 set guioptions-=T       "get rid of Tool bar
 set guioptions+=c     "console dialogs instead of popups for simple choices

@@ -31,6 +31,8 @@
 ":help vim-script-info
 "http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"If errors occur, use :messages to review the errors
+"Use :redir to redirect commandline output to a file or register.
 
 set nocompatible
 set cindent

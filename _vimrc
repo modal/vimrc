@@ -407,5 +407,7 @@ nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 "hi clear CursorLine
 "hi CursorLine gui=underline
 
+"Should first see if grep is installed
+set grepprg=grep "\ -n
 
 

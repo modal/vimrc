@@ -410,4 +410,5 @@ nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 "Should first see if grep is installed
 set grepprg=grep "\ -n
 
-
+"Set encryption method to blowfish
+set cm=blowfish

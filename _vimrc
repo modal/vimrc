@@ -34,6 +34,11 @@
 "If errors occur, use :messages to review the errors
 "Use :redir to redirect commandline output to a file or register.
 
+"REMEMBER
+"args => to open multiple files from command line and have them in the args list
+"argdo to perform an action such as a search and replace over the files in the
+"argument list
+
 set nocompatible
 set cindent
 set shiftwidth=4

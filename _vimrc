@@ -88,6 +88,14 @@ set laststatus=2 "Always display status bar
 " These commands open folds
 "set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
+"Pathogen
+" have an if it exists
+filetype off
+filetype plugin off
+filetype indent off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 "Auto Reload _vimrc on modification
 au! BufWritePost _vimrc source %
 

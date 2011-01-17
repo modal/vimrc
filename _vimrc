@@ -206,6 +206,9 @@ autocmd FileType ruby   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!ruby % <CR>
 "map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 "autocmd FileType python   map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
+"Set Ruby Path
+let g:ruby_path = 'c:\Ruby191\bin'
+
 "
 "
 if has('autocmd')

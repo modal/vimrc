@@ -429,6 +429,7 @@ nmap <leader>ml I<a href=A></a>F>
 
 "Work Based Maps
 nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
+nmap <leader>Papc :Project c:\Keil\C51\projects\cre_apc\_vim_project__cre_apc.txt<CR>
 
 "Turn on cursor line highlight, which highlights the current selected line
 "set cursorline

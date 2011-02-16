@@ -50,7 +50,8 @@ set expandtab
 "http://en.wikipedia.org/wiki/List_of_typefaces#Unicode_fonts
 "http://dejavu-fonts.org
 "set guifont=Courier\ New
-set guifont=DejaVu_Sans_Mono:h10:cANSI
+"set guifont=DejaVu_Sans_Mono:h10:cANSI
+set guifont=mensch:h10:cANSI
 "set guifont=Consolas:h10:cANSI
 "set guifont=BitStream_Vera_Sans_Mono:h9:cANSI
 set printfont=Consolas:h8:cANSI
@@ -59,10 +60,6 @@ set textwidth=80
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
-colorscheme codeblocks_dark
-"darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
-"bluechia inkpot tango blackboard codeblocks_dark
-"nevfn
 set hidden  "What does it do again?
 
 "initial window width

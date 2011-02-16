@@ -252,25 +252,27 @@ vnoremap <SID><Down> j
 "For literals must press ctrl+v in insert mode then type
 "exampe for enter ctrl+v then press enter
 "Map Control Up and Control Down to do buffer previous and next
-nmap <C-up> :bprev
-nmap <C-down> :bnext
+nmap <C-up> :bprev<CR>
+nmap <C-down> :bnext<CR>
 
 "QuickList
-nmap <C-left> :cprevious
-nmap <C-right> :cnext
+nmap <C-left> :cprevious<CR>
+nmap <C-right> :cnext<CR>
 
 "To grab entire words above or below in insert mode
 "inoremap <C-Y> <Esc>klyiWjpa
 "inoremap <C-E> <Esc>jlyiWkPa
 
 "Remove spaces and tabs at end of lines
-nmap <F2> :%s/\s\+$//gc
+nmap <F2> :%s/\s\+$//gc<CR>
+
 
 " map F5 to display all lines with keyword under cursor and ask which one to
 " jump to
 map <F5> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
-map <F7> :make
+map <F7> :make<CR>
+
 
 "Turn ON Line Numbering
 set number

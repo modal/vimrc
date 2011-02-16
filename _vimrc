@@ -87,12 +87,20 @@ set laststatus=2 "Always display status bar
 "set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
 "Pathogen
-" have an if it exists
+" have an if it exists?
+"
+"On Windows store plugins at c:\home\vimfiles\
 filetype off
 filetype plugin off
 filetype indent off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+"Make sure plugin data is not used before pathogen functions are called
+
+colorscheme CodeBlocks_dark
+"darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
+"bluechia inkpot tango blackboard Codeblocks_dark
+"nevfn
 
 "Auto Reload _vimrc on modification
 au! BufWritePost _vimrc source %

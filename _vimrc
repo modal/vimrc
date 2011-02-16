@@ -18,8 +18,12 @@
 "
 "MUST ALSO SET UP SSH KEYS
 "http://help.github.com/msysgit-key-setup/
+"
+"Generating Hardlinks on Windows
+"c:\fsutil hardlink create newfile existingfil
+"http://goo.gl/skZL
 
-"Make sure to cover WINDOWS and LINUX
+"Make sure to cover Windows and LINUX
 
 "Updating helptags after adding doc files
 "helptags $vim\vimfiles\doc

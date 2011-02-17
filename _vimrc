@@ -182,8 +182,10 @@ au! BufNewFile *.c,*.cpp,*.h :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endi
 "http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes
 "http://www.joelonsoftware.com/articles/Unicode.html
 set encoding=utf-8
-set list
-set listchars=tab:▶\ ,eol:★
+if has('gui_running')
+    set list
+    set listchars=tab:▶\ ,eol:★
+endif
 
 if has('win32')
   set diffexpr=MyDiff()

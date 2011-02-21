@@ -212,6 +212,7 @@ endif
 "Original, replaces existing <S-e> usage
 "map <buffer> <S-e> :w<CR>:!python % <CR>
 autocmd FileType python   map <buffer> <S-e> :w<CR>:!python % <CR>
+autocmd FileType python   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!start python % <CR>
 "autocmd FileType ruby   map <buffer> <S-e> :w<CR>:!ruby % <CR>
 autocmd FileType ruby   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!ruby % <CR>
 "linux/unix

@@ -16,6 +16,8 @@
 "
 "GIT Reference Site => gitref.org
 "
+"On Windows, setup git-gui batch file script
+"
 "MUST ALSO SET UP SSH KEYS
 "http://help.github.com/msysgit-key-setup/
 "
@@ -23,13 +25,16 @@
 "c:\fsutil hardlink create newfile existingfil
 "http://goo.gl/skZL
 
-"Make sure to cover Windows and LINUX
+"Make sure to cover Windows and Linux
 
 "Updating helptags after adding doc files
 "helptags $vim\vimfiles\doc
 
 "Use <SID> to mark maps to detemine where mapping changed.
 "
+"Using Vim as an external editor for Altera and Microchip
+"pathtovim/gvim.exe --servername GVIMQUART --remote-silent
+"+%l %f
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vimscript information
 ":help vim-script-info

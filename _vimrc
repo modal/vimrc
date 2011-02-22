@@ -322,6 +322,10 @@ nnoremap <silent> <F10> :!start /min ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<
 let g:yankring_history_dir = expand('$VIM\dump')
 nnoremap <silent> <F11> :YRShow<CR>
 
+"Shell.vim Plugin
+"Usually maps to F11
+nnoremap <silent> <F12> :Fullscreen<CR>
+
 "MiniBufExplorer (NOT USED)
 
 "NERDTree

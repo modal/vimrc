@@ -192,6 +192,7 @@ set encoding=utf-8
 if has('gui_running')
     set list
     set listchars=tab:▶\ ,eol:★
+	set listchars+=trail:◥
 endif
 
 if has('win32')

@@ -104,6 +104,9 @@ set laststatus=2 "Always display status bar
 filetype off
 filetype plugin off
 filetype indent off
+if has("win32")
+    set shellslash
+endif
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called

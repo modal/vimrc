@@ -58,6 +58,8 @@ set expandtab
 "UNICODE FULL SUPPORT FOR DejaVu, Code2000, and Unifont
 "http://en.wikipedia.org/wiki/List_of_typefaces#Unicode_fonts
 "http://dejavu-fonts.org
+"http://vim.1045645.n5.nabble.com/gvim-on-Windows-font-not-showing-up-in-guifont-td1187706.html
+"Creating Fonts =>  http://fontforge.sourceforge.net/
 "set guifont=Courier\ New
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
 set guifont=mensch:h10:cANSI

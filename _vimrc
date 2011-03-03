@@ -216,7 +216,7 @@ if has('win32')
     let arg3 = v:fname_out
     if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
     if &sh =~ '\<cmd'
-      silent execute '!""' . $VIM. '\vim72\diff.exe" ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . '"'
+      silent execute '!""' . $VIM. '\vim73\diff.exe" ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . '"'
     else
       silent execute '!'.$VIM.'\vim64\diff.exe" ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
     endif

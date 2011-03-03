@@ -321,6 +321,10 @@ set wildmenu
 nnoremap <silent> <F10> :!start /min ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<CR>
 
 "GLOBAL PLUGIN VARIABLES
+
+"Gundo.vim Plugin
+nnoremap <silent> <F4> :GundoToggle<CR>
+
 "Yankring.vim Variables
 let g:yankring_history_dir = expand('$VIM\dump')
 nnoremap <silent> <F11> :YRShow<CR>

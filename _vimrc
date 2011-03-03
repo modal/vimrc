@@ -283,6 +283,7 @@ nmap <C-right> :cnext<CR>
 
 "Remove spaces and tabs at end of lines
 nmap <F2> :%s/\s\+$//gc<CR>
+"nmap <F2> :%s/\s\+$//<CR>:let @/=''<CR>
 
 
 " map F5 to display all lines with keyword under cursor and ask which one to

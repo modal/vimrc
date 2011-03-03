@@ -195,8 +195,13 @@ set encoding=utf-8
 if has('gui_running')
     set list
     set listchars=tab:▶\ ,eol:★
-	set listchars+=trail:◥
+    set listchars+=trail:◥
 endif
+
+"Highlight Whitespace
+autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
+autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
+highlight EOLWS ctermbg=red guibg=red
 
 if has('win32')
   set diffexpr=MyDiff()

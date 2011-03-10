@@ -16,7 +16,7 @@
 "
 "GIT Reference Site => gitref.org
 "
-"On Windows, setup git-gui batch file script
+"On Windows, setup git-gui batch file script.
 "
 "MUST ALSO SET UP SSH KEYS
 "http://help.github.com/msysgit-key-setup/
@@ -265,7 +265,7 @@ set nowritebackup
 "set backup
 "set backupdir=$VIM/backups
 
-"KEY MAPPING
+"Key Mapping
 "Type :map to display all mappings
 vnoremap <SID><Left> h
 vnoremap <SID><Right> l

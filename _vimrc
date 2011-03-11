@@ -134,7 +134,7 @@ let @z="\"+p"
 filetype plugin on
 "Not sure how the next 2 work
 "filetype on
-"filetype indent on
+filetype indent on
 
 "Turn on syntax highlighting
 syntax on

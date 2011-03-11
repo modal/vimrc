@@ -112,9 +112,9 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called
 
-colorscheme CodeBlocks_dark
+colorscheme ego
 "darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
-"bluechia inkpot tango blackboard Codeblocks_dark
+"bluechia inkpot tango blackboard Codeblocks_dark neopro
 "nevfn
 
 "Auto Reload _vimrc on modification

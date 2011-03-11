@@ -349,6 +349,8 @@ map <leader>nt  :NERDTreeToggle<CR>
 "Disable Show Marks
 let g:showmarks_enable=0
 
+"Display output of shell commands in new window
+"http://vim.wikia.com/wiki/Display_output_of_shell_commands_in_new_window
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 function! s:RunShellCommand(cmdline)
   echo a:cmdline
@@ -373,6 +375,7 @@ endfunction
 command! -bar Hexmode call ToggleHex()
 
 " helper function to toggle hex mode
+"http://vim.wikia.com/wiki/Improved_hex_editing
 function! ToggleHex()
   " hex mode should be considered a read-only operation
   " save values for modified and read-only for restoration later,

@@ -463,8 +463,11 @@ nmap <leader>ml I<a href=A></a>F>
 nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 nmap <leader>Papc :Project c:\Keil\C51\projects\cre_apc\_vim_project__cre_apc.txt<CR>
 
+"cd shortcuts
+"Path environment variables must be defined for these to work properly.
 nmap <leader>home :cd $home<CR>
 nmap <leader>bin  :cd c:\bin<CR>
+nmap <leader>desk :cd $desktop<cr>
 
 "Turn on cursor line highlight, which highlights the current selected line
 "set cursorline
@@ -473,6 +476,7 @@ nmap <leader>bin  :cd c:\bin<CR>
 
 "Should first see if grep is installed
 set grepprg=grep "\ -n
+"When using internal search and replace remember Very Magic and Magic options.
 
 "Set encryption method to blowfish
 set cm=blowfish

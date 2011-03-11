@@ -456,10 +456,10 @@ endfunc
 "\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 "\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-"Make link (html)
+"Make link (html) ==>use ragtag?
 nmap <leader>ml I<a href=A></a>F>
 
-"Work Based Maps
+"Work Based Maps for project plugin
 nmap <leader>Ptxt :Project c:\txt\_vim_project_txts<CR>
 nmap <leader>Papc :Project c:\Keil\C51\projects\cre_apc\_vim_project__cre_apc.txt<CR>
 

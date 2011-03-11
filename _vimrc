@@ -45,6 +45,7 @@
 
 "TODO REMEMBER TODO
 "q: brings up history of command line to edit and use
+"q\ brings up history of search line to edit and use
 "args => to open multiple files from command line and have them in the args list
 "argdo to perform an action such as a search and replace over the files in the
 "argument list

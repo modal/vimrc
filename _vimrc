@@ -340,6 +340,9 @@ nnoremap <silent> <F11> :YRShow<CR>
 "Usually maps to F11
 nnoremap <silent> <F12> :Fullscreen<CR>
 
+"MRU plugin
+let MRU_Max_Entries = 500
+
 "MiniBufExplorer (NOT USED)
 
 "NERDTree
@@ -349,6 +352,8 @@ map <leader>nt  :NERDTreeToggle<CR>
 "ShowMarks
 "Disable Show Marks
 let g:showmarks_enable=0
+
+"Fuzzyfinder
 
 "Display output of shell commands in new window
 "http://vim.wikia.com/wiki/Display_output_of_shell_commands_in_new_window

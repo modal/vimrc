@@ -137,7 +137,7 @@ filetype plugin on
 filetype indent on
 
 "Turn on syntax highlighting
-syntax on
+syntax enable
 
 set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 

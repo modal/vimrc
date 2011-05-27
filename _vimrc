@@ -355,6 +355,13 @@ let g:showmarks_enable=0
 
 "Fuzzyfinder
 
+
+"Persistent Undo (:help new-persistent-undo)
+set undodir=expand('$HOME\dump')
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 "Display output of shell commands in new window
 "http://vim.wikia.com/wiki/Display_output_of_shell_commands_in_new_window
 command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)

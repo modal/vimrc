@@ -1,4 +1,7 @@
 
+":options to view all options
+":verbose to determine where an option was last set
+
 "Keep a copy of this on github.com
 "Commit change locally
 "git commit _vimrc -m "minor edit"

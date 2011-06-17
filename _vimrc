@@ -504,6 +504,7 @@ nmap <leader>Papc :Project c:\Keil\C51\projects\cre_apc\_vim_project__cre_apc.tx
 nmap <leader>home :cd $home<CR>
 nmap <leader>bin  :cd c:\bin<CR>
 nmap <leader>desk :cd $desktop<cr>
+nmap <leader>cdpy :cd $home\py<CR>
 
 "Turn on cursor line highlight, which highlights the current selected line
 "set cursorline

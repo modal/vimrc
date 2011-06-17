@@ -147,7 +147,8 @@ set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 " Set the status line the way I like it (Derek Wyatt)
 "set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]\ %y
-
+"what highlight id is the word under the cursor
+"set stl+=\ \ %{synIDattr(synID(line('.'),col('.'),1),'name')}
 
 "Project Vim Plugin
 "use vimgrep
@@ -396,6 +397,16 @@ function! s:RunShellCommand(cmdline)
   setlocal nomodifiable
   1
 endfunction
+
+"Find out which highligh group a keyword belongs to
+nmap <Leader>sI :call <SID>SynStack()<CR>
+
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " ex command for toggling hex mode - define mapping if desired
 command! -bar Hexmode call ToggleHex()

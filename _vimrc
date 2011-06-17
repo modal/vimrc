@@ -352,7 +352,11 @@ nnoremap <silent> <F11> :YRShow<CR>
 
 "Shell.vim Plugin
 "Usually maps to F11
-nnoremap <silent> <F12> :Fullscreen<CR>
+let g:shell_mappings_enabled = 0
+inoremap <F12> <C-o>:Fullscreen<CR>
+nnoremap <F12> :Fullscreen<CR>
+inoremap <F6> <C-o>:Open<CR>
+nnoremap <F6> :Open<CR>
 
 "MRU plugin
 let MRU_Max_Entries = 500

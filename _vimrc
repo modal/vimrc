@@ -2,6 +2,8 @@
 ":options to view all options
 ":verbose to determine where an option was last set
 
+"Git Notes
+"
 "Keep a copy of this on github.com
 "Commit change locally
 "git commit _vimrc -m "minor edit"
@@ -10,14 +12,20 @@
 "Alternatively
 "git push git@github.com:modal/vimrc.git
 "
-"?????How do set up origin master????????
+"Get latest commits from remote repository
+"git fetch origin master
 "
+"Move to latest commit in remote repository
+"git reset --hard origin
+"
+"?????How do set up origin master????????
 ""SETTING UP GIT
 "
 "git config github.user modal
 "git config github.token TOKENPROVIDEDBYGITHUB
 "
 "GIT Reference Site => gitref.org
+"http://devwiki.pfsense.org/GitWorkflow"
 "
 "On Windows, setup git-gui batch file script.
 "

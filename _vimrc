@@ -157,6 +157,10 @@ set cpoptions+=$  "Mark to show where the end of a CHANGE command will occur
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]\ %y
 "what highlight id is the word under the cursor
 "set stl+=\ \ %{synIDattr(synID(line('.'),col('.'),1),'name')}
+if exists('g:loaded_fugitive')
+    set statusline+=%{fugitive#statusline()}
+    "set stl+= %{fugitive#statusline()}
+endif
 
 "Project Vim Plugin
 "use vimgrep

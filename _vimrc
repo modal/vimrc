@@ -74,10 +74,16 @@ set expandtab
 "Creating Fonts =>  http://fontforge.sourceforge.net/
 "set guifont=Courier\ New
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
-set guifont=mensch:h10:cANSI
+set guifont=mensch:h11:cANSI
+"set guifont=Inconsolata-dz:h13:cANSI
+"set guifont=Tamsyn8x17
+"set guifont=gohufont-14
+"set guifont=Dina
+"set guifont=everson_mono:h13:cANSI
 "set guifont=Consolas:h10:cANSI
 "set guifont=BitStream_Vera_Sans_Mono:h9:cANSI
-set printfont=Consolas:h8:cANSI
+"set printfont=Consolas:h8:cANSI
+set printfont=mensch:h8:cANSI
 set textwidth=80
 ":digraphs to this other characters not normally enter with keyboard
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?

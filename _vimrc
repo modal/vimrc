@@ -536,6 +536,10 @@ nmap <leader>bin  :cd c:\bin<CR>
 nmap <leader>desk :cd $desktop<cr>
 nmap <leader>cdpy :cd $home\py<CR>
 
+"Git Gui Shortcut
+"http://www.computerhope.com/starthlp.htm
+nmap <leader>ggui :!start git gui<CR>
+
 "Turn on cursor line highlight, which highlights the current selected line
 "set cursorline
 "hi clear CursorLine

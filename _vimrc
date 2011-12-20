@@ -266,6 +266,9 @@ autocmd FileType ruby   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!ruby % <CR>
 "linux/unix
 "map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 "autocmd FileType python   map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+autocmd FileType dosbatch   map <buffer> <S-e> :w<CR>:lcd %:h<CR>:!"%" <CR>
+autocmd FileType dosbatch   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!start "%" <CR>
+
 
 "Set Ruby Path
 let g:ruby_path = 'c:\Ruby191\bin'

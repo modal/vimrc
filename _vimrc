@@ -72,6 +72,7 @@ set expandtab
 "http://dejavu-fonts.org
 "http://vim.1045645.n5.nabble.com/gvim-on-Windows-font-not-showing-up-in-guifont-td1187706.html
 "Creating Fonts =>  http://fontforge.sourceforge.net/
+"Determine unicode char by drawing it => http://shapecatcher.com/
 "set guifont=Courier\ New
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
 set guifont=mensch:h11:cANSI

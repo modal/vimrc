@@ -25,7 +25,8 @@
 "git config github.token TOKENPROVIDEDBYGITHUB
 "
 "GIT Reference Site => gitref.org
-"http://devwiki.pfsense.org/GitWorkflow"
+"http://devwiki.pfsense.org/GitWorkflow
+"http://marklodato.github.com/visual-git-guide/index-en.html
 "
 "On Windows, setup git-gui batch file script.
 "

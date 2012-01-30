@@ -331,6 +331,7 @@ nmap <F2> :%s/\s\+$//gc<CR>
 map <F5> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 map <F7> :make<CR>
+map <c-F7> :make -B<CR>
 
 " Tab mappings.
 "map <leader>tt :tabnew<cr>

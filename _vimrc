@@ -405,6 +405,19 @@ let g:showmarks_enable=0
 
 "Fuzzyfinder
 
+"GCC compile
+"map <F3> :call CompileGpp()<CR>
+"func! CompileGpp()
+"  exec "w"
+"  exec "!g++ % -o %<"
+"endfunc
+
+"map <F4> :call CompileRunGpp()<CR>
+"func! CompileRunGcc()
+"  exec "w"
+"  exec "!g++ % -o %<"
+"  exec "! ./%<"
+"endfunc
 
 "Persistent Undo (:help new-persistent-undo)
 set undodir=expand('$HOME\dump')

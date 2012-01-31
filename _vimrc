@@ -221,14 +221,19 @@ au! BufNewFile *.c,*.cpp,*.h :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endi
 "  silent execute '!$VIM\vim72\diff.exe' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
 "endfunction
 
+set encoding=utf-8
+if has('gui_running')
 "Display Hidden Characters
 "http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes
 "http://www.joelonsoftware.com/articles/Unicode.html
-set encoding=utf-8
-if has('gui_running')
     set list
     set listchars=tab:▶\ ,eol:★
     set listchars+=trail:◥
+    set listchars+=extends:❯
+    set listchars+=precedes:❮
+
+    "vertical splits less gap between bars
+    set fillchars+=vert:│
 endif
 
 "Highlight Whitespace

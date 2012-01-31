@@ -354,6 +354,10 @@ map <c-F7> :make -B<CR>
 set number
 hi LineNr guifg=white guibg=black ctermfg=yellow ctermbg=black
 
+"Easymotion Highlights
+hi EasyMotionTarget guifg=red guibg=black ctermfg=red ctermbg=black
+hi EasyMotionShade ctermbg=none ctermfg=grey
+
 "****Notes
 "****To Highlight Tabs, useful for makefiles
 "syntax match Tab /\t/

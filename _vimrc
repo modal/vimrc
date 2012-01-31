@@ -350,6 +350,16 @@ map <c-F7> :make -B<CR>
 "map <leader>tl :tablast<cr>
 "map <leader>tm :tabmove
 
+"Disable up/down/left/right arrows (Force usage of hjkl)
+inoremap <Up>      <NOP>
+inoremap <Down>    <NOP>
+inoremap <Left>    <NOP>
+inoremap <Right>   <NOP>
+noremap <Up>       <NOP>
+noremap <Down>     <NOP>
+noremap <Left>     <NOP>
+noremap <Right>    <NOP>
+
 "Turn ON Line Numbering
 set number
 hi LineNr guifg=white guibg=black ctermfg=yellow ctermbg=black

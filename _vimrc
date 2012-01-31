@@ -262,6 +262,7 @@ if has('win32')
 endif
 
 "Execute python file being edit with
+"Execute python file being edited
 "Make this an autocmd based on *.py or *.pyw extension
 "Original, replaces existing <S-e> usage
 "map <buffer> <S-e> :w<CR>:!python % <CR>

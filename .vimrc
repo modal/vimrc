@@ -131,7 +131,8 @@ if has("win32")
 endif
 call pathogen#infect()
 "call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#helptags()
+":Helptags  ==> runs call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called
 
 "Use HexHighlighter <leader><F2> to see hex colors

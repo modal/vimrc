@@ -356,6 +356,9 @@ map <c-F7> :make -B<CR>
 "map <leader>tl :tablast<cr>
 "map <leader>tm :tabmove
 
+map gb  :tabprevious<CR>
+map gB  :tabnext<CR>
+
 "Disable up/down/left/right arrows (Force usage of hjkl)
 inoremap <Up>      <NOP>
 inoremap <Down>    <NOP>

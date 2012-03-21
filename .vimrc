@@ -34,9 +34,11 @@
 "http://help.github.com/msysgit-key-setup/
 "
 "Generating Hardlinks on Windows
-"c:\fsutil hardlink create newfile existingfil
 "http://goo.gl/skZL
-
+"c:\fsutil hardlink create newfile existingfil
+"Example:
+"c:\fsutil hardlink create _vimrc c:\repo\vimrc\.vimrc
+"
 "Make sure to cover Windows and Linux
 
 "Updating helptags after adding doc files

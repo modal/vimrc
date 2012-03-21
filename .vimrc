@@ -270,6 +270,8 @@ endif
 "map <buffer> <S-e> :w<CR>:!python % <CR>
 autocmd FileType python   map <buffer> <S-e> :w<CR>:lcd %:h<CR>:!python "%" <CR>
 autocmd FileType python   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!start python "%" <CR>
+"use python debugger
+autocmd FileType python   map <buffer> <M-d> :w<CR>:lcd %:h<CR>:!start python -m pdb "%" <CR>
 "autocmd FileType ruby   map <buffer> <S-e> :w<CR>:!ruby % <CR>
 autocmd FileType ruby   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!ruby % <CR>
 "linux/unix

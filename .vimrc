@@ -291,6 +291,8 @@ if has('autocmd')
     autocmd BufEnter *.otl set filetype=outline
 endif
 
+autocmd BufEnter *.vhdl,*.vhd  set ignorecase
+
 " cd to the directory containing the file in the buffer
 nmap  \lcd :lcd %:h<CR>
 

@@ -1,7 +1,12 @@
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":options to view all options
 ":verbose to determine where an option was last set
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Latest Vim for Windows with all patches
+"http://wyw.dcweb.cn/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Git Notes
 "
 "Keep a copy of this on github.com
@@ -56,7 +61,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "If errors occur, use :messages to review the errors
 "Use :redir to redirect commandline output to a file or register.
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TODO REMEMBER TODO
 "q: brings up history of command line to edit and use
 "q\ brings up history of search line to edit and use

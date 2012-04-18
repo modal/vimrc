@@ -341,7 +341,7 @@ nmap <C-right> :cnext<CR>
 "inoremap <C-Y> <Esc>klyiWjpa
 "inoremap <C-E> <Esc>jlyiWkPa
 
-"Remove spaces and tabs at end of lines
+"Remove spaces and tabs at end of lines (whitespace removal)
 nmap <F2> :%s/\s\+$//gc<CR>
 "nmap <F2> :%s/\s\+$//<CR>:let @/=''<CR>
 

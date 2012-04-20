@@ -141,10 +141,14 @@ call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called
 
 "Use HexHighlighter <leader><F2> to see hex colors
-colorscheme blackboard
+if has('gui_running')
+    colorscheme skittles_berry
+else
+    colorscheme default
+endif
 "darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
-"bluechia inkpot tango blackboard Codeblocks_dark neopro ego
-"nevfn
+"bluechia inkpot tango blackboard Codeblocks_dark neopro ego tortex
+"nevfn tabula
 
 "See if highlight is there for nonchar, if it not set it to something
 "FIXME

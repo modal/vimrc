@@ -595,6 +595,8 @@ nmap <leader>bin  :cd c:\bin<CR>
 nmap <leader>desk :cd $desktop<cr>
 nmap <leader>cdpy :cd $home\py<CR>
 
+nmap <leader>eh :!start explorer .<CR>
+
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm
 nmap <leader>ggui :!start git gui<CR>

@@ -230,7 +230,7 @@ au! BufNewFile *.c,*.cpp,*.h :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endi
 "  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
 "  let arg3 = v:fname_out
 "  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-"  silent execute '!$VIM\vim72\diff.exe' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
+"  silent execute '!$VIM\vim73\diff.exe' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
 "endfunction
 
 set encoding=utf-8

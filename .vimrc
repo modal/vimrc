@@ -1,5 +1,4 @@
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":options to view all options
 ":verbose to determine where an option was last set
@@ -595,7 +594,10 @@ nmap <leader>bin  :cd c:\bin<CR>
 nmap <leader>desk :cd $desktop<cr>
 nmap <leader>cdpy :cd $home\py<CR>
 
+"Open Explorer in current working directory
 nmap <leader>eh :!start explorer .<CR>
+nmap <leader>ehp :!start explorer ..\<CR>
+nmap <leader>epc :!start explorer c:\projects\components<CR>
 
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm
@@ -613,3 +615,5 @@ set grepprg=grep "\ -n
 
 "Set encryption method to blowfish
 set cm=blowfish
+
+let g:UltiSnipsUsePythonVersion=":py "

@@ -613,6 +613,9 @@ nmap <leader>gdiff :!start git difftool<CR>
 set grepprg=grep "\ -n
 "When using internal search and replace remember Very Magic and Magic options.
 
+"Read vimcasts article
+let NERDTreeHijackNetrw=1
+
 "Set encryption method to blowfish
 set cm=blowfish
 

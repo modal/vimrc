@@ -278,7 +278,7 @@ highlight EOLWS ctermbg=red guibg=red
 "Make this an autocmd based on *.py or *.pyw extension
 "Original, replaces existing <S-e> usage
 "map <buffer> <S-e> :w<CR>:!python % <CR>
-autocmd FileType python   map <buffer> <S-e> :w<CR>:lcd %:h<CR>:!python "%" <CR>
+autocmd FileType python   map <buffer> <M-e> :w<CR>:lcd %:h<CR>:!python "%" <CR>
 autocmd FileType python   map <buffer> <M-x> :w<CR>:lcd %:h<CR>:!start python "%" <CR>
 "use python debugger
 autocmd FileType python   map <buffer> <M-d> :w<CR>:lcd %:h<CR>:!start python -m pdb "%" <CR>

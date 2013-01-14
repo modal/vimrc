@@ -37,6 +37,10 @@
 "MUST ALSO SET UP SSH KEYS
 "http://help.github.com/msysgit-key-setup/
 "
+"pushing to multiple repositories
+"http://www.deanclatworthy.com/2013/01/how-to-avoid-relying-on-github-mirror-your-repository/
+"http://jeetworks.org/node/22
+
 "Generating Hardlinks on Windows
 "http://goo.gl/skZL
 "c:\fsutil hardlink create newfile existingfil

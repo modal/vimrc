@@ -603,6 +603,8 @@ nmap <leader>eh :!start explorer .<CR>
 nmap <leader>ehp :!start explorer ..\<CR>
 nmap <leader>epc :!start explorer c:\projects\components<CR>
 
+nmap <leader>ch :lcd %:h<CR>:!start cmd<CR>
+
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm
 nmap <leader>ggui :!start git gui<CR>

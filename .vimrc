@@ -614,6 +614,7 @@ nmap <leader>ch :lcd %:h<CR>:!start cmd<CR>
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm
 nmap <leader>ggui :!start git gui<CR>
+"nmap <leader>gtk  :!start gitk<CR>
 nmap <leader>gdiff :!start git difftool<CR>
 
 "Nios Command shell

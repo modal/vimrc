@@ -151,7 +151,7 @@ call pathogen#helptags()
 
 "Use HexHighlighter <leader><F2> to see hex colors
 if has('gui_running')
-    colorscheme skittles_berry
+    colorscheme tortex
 else
     colorscheme default
 endif

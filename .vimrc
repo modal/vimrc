@@ -222,7 +222,7 @@ set lazyredraw
 "set omnifunc = true
 "
 "File Type Autocmd
-autocmd FileType make     set noexpandtab
+autocmd FileType make     setlocal noexpandtab
 
 "C autocmd
 "auto add #ifndef block

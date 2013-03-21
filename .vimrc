@@ -92,7 +92,7 @@ set expandtab
 "Determine unicode char by drawing it => http://shapecatcher.com/
 "set guifont=Courier\ New
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
-set guifont=mensch:h11:cANSI
+set guifont=mensch:h8:cANSI
 "set guifont=Inconsolata-dz:h13:cANSI
 "set guifont=Tamsyn8x17
 "set guifont=gohufont-14

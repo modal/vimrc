@@ -3,8 +3,11 @@
 ":options to view all options
 ":verbose to determine where an option was last set
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Latest Vim for Windows with all patches
+"Latest Vim for Windows with all patches, Wu
 "http://wyw.dcweb.cn/
+"
+"Patch Description List for 7.3
+"ftp://ftp.vim.org/pub/vim/patches/7.3/README
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Git Notes
 "

@@ -636,3 +636,8 @@ let NERDTreeHijackNetrw=1
 set cm=blowfish
 
 let g:UltiSnipsUsePythonVersion=":py "
+
+"Modeline Magic
+"http://vim.wikia.com/wiki/Modeline_magic
+"Set modeline
+" vim:set et sts=2 sw=2:

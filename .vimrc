@@ -61,12 +61,13 @@
 "pathtovim/gvim.exe --servername GVIMQUART --remote-silent
 "+%l %f
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Useful Videos
+"Derek Wyatt
+"Drew Neil
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vimscript information
 ":help vim-script-info
 "http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"If errors occur, use :messages to review the errors
-"Use :redir to redirect commandline output to a file or register.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TODO REMEMBER TODO
 "q: brings up history of command line to edit and use
@@ -74,7 +75,9 @@
 "args => to open multiple files from command line and have them in the args list
 "argdo to perform an action such as a search and replace over the files in the
 "argument list
-
+"Use :redir to redirect commandline output to a file or register.
+"If errors occur, use :messages to review the errors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set cindent
 set shiftwidth=4

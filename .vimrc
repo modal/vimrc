@@ -6,6 +6,9 @@
 "Latest Vim for Windows with all patches, Wu
 "http://wyw.dcweb.cn/
 "
+"Latest Patched Binaries from Tuxproject
+"http://tuxproject.de/projects/vim/
+"
 "Patch Description List for 7.3
 "ftp://ftp.vim.org/pub/vim/patches/7.3/README
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

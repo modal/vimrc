@@ -621,7 +621,7 @@ nmap <leader>ggui :!start git gui<CR>
 nmap <leader>gdiff :!start git difftool<CR>
 
 "Nios Command shell
-nmap <leader>ncs :!start "C:\altera\10.1\nios2eds\Nios II Command Shell.bat"<CR>
+nmap <leader>ncs :!start "C:\altera\12.1\nios2eds\Nios II Command Shell.bat"<CR>
 
 "Turn on cursor line highlight, which highlights the current selected line
 "set cursorline

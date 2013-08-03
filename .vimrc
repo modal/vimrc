@@ -640,6 +640,8 @@ set cm=blowfish
 
 let g:UltiSnipsUsePythonVersion=":py "
 
+"Add System properties shortcut WINKEY + PAUSE/Break Key
+
 "Modeline Magic
 "http://vim.wikia.com/wiki/Modeline_magic
 "Set modeline

@@ -9,8 +9,8 @@
 "Latest Patched Binaries from Tuxproject
 "http://tuxproject.de/projects/vim/
 "
-"Patch Description List for 7.3
-"ftp://ftp.vim.org/pub/vim/patches/7.3/README
+"Patch Description List for 7.4
+"ftp://ftp.vim.org/pub/vim/patches/7.4/README
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Git Notes
 "
@@ -641,6 +641,7 @@ set cm=blowfish
 let g:UltiSnipsUsePythonVersion=":py "
 
 "Add System properties shortcut WINKEY + PAUSE/Break Key
+"TODO
 
 "Modeline Magic
 "http://vim.wikia.com/wiki/Modeline_magic

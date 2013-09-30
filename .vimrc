@@ -318,7 +318,7 @@ endif
 autocmd BufEnter *.vhdl,*.vhd  set ignorecase
 
 " cd to the directory containing the file in the buffer
-nmap  \lcd :lcd %:h<CR>
+nmap  <leader>lcd :lcd %:h<CR>
 
 "Swap File Recovery Steps
 "1. r # at the prompt hit "r" to recover the swap file

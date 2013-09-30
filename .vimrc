@@ -184,6 +184,12 @@ let @c="\"+yy"
 let @x="\"+dd"
 let @z="\"+p"
 
+"if has('unnamedplus')
+"  set clipboard=unamedplus
+"else
+"  set clipboard=unnamed
+"endif
+
 filetype plugin on
 "Not sure how the next 2 work
 "filetype on

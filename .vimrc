@@ -80,6 +80,8 @@
 "argument list
 "Use :redir to redirect commandline output to a file or register.
 "If errors occur, use :messages to review the errors
+"Here document, which is useful when writing scripts
+"http://www.tldp.org/LDP/abs/html/here-docs.html
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set cindent

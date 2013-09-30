@@ -615,6 +615,7 @@ nmap <leader>ehp :!start explorer ..\<CR>
 nmap <leader>epc :!start explorer c:\projects\components<CR>
 
 nmap <leader>ch :lcd %:h<CR>:!start cmd<CR>
+nmap <leader>psh  :lcd %:h<CR>:!start powershell<CR>
 
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm

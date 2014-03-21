@@ -629,6 +629,9 @@ nmap <leader>ggui :!start git gui<CR>
 "nmap <leader>gtk  :!start gitk<CR>
 nmap <leader>gdiff :!start git difftool<CR>
 
+"Tortoise Hg Shortcut
+nmap <leader>hg :!start thg<CR>
+
 "Nios Command shell
 nmap <leader>ncs :!start "C:\altera\12.1\nios2eds\Nios II Command Shell.bat"<CR>
 

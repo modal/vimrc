@@ -156,7 +156,7 @@ call pathogen#helptags()
 
 "Use HexHighlighter <leader><F2> to see hex colors
 if has('gui_running')
-    colorscheme tortex
+    colorscheme risto
 else
     colorscheme default
 endif

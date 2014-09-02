@@ -6,6 +6,9 @@
 "Latest Vim for Windows with all patches, Wu
 "http://wyw.dcweb.cn/
 "
+"Neovim - Next Generation VIM
+"http://neovim.org/
+"
 "Latest Patched Binaries from Tuxproject
 "http://tuxproject.de/projects/vim/
 "
@@ -64,9 +67,9 @@
 "pathtovim/gvim.exe --servername GVIMQUART --remote-silent
 "+%l %f
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Useful Videos
-"Derek Wyatt
-"Drew Neil
+"Useful Videos and Sites
+"   Derek Wyatt
+"   Drew Neil
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vimscript information
 ":help vim-script-info

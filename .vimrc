@@ -427,7 +427,7 @@ set wildmenu
 "Compile program with gcc
 "set makeprg=gcc \test.c
 "Using mingw make
-"set makeprg=C:\MinGW\bin\mingw32-make
+set makeprg=CC:\MinGW\msys\1.0\bin\make
 
 "Write as sudo on linux/unix
 ":w !sudo tee %

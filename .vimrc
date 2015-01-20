@@ -159,7 +159,7 @@ call pathogen#helptags()
 
 "Use HexHighlighter <leader><F2> to see hex colors
 if has('gui_running')
-    colorscheme risto
+    colorscheme desert256
 else
     colorscheme default
 endif
@@ -239,8 +239,8 @@ set lazyredraw
 autocmd FileType make     setlocal noexpandtab
 
 "C autocmd
-"auto add #ifndef block
-au! BufNewFile *.c,*.cpp,*.h :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endifO
+"auto add #ifndef block for C file header
+au! BufNewFile *.hpp,*.h,*.hxx :norm i#ifndef __%__F.r_BvW~0yyplcwdefineo#endifO
 
 "set diffexpr=MyDiff()
 "function MyDiff()

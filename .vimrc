@@ -406,7 +406,7 @@ noremap <Right>    <NOP>
 
 "Turn ON Line Numbering
 set number
-hi LineNr guifg=white guibg=black ctermfg=yellow ctermbg=black
+hi LineNr guifg=green guibg=black ctermfg=yellow ctermbg=black
 
 "Easymotion Highlights
 hi EasyMotionTarget guifg=red guibg=black ctermfg=red ctermbg=black

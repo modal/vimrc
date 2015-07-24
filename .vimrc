@@ -1,4 +1,4 @@
-
+" vim notes {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":options to view all options
 ":verbose to determine where an option was last set
@@ -86,6 +86,7 @@
 "Here document, which is useful when writing scripts
 "http://www.tldp.org/LDP/abs/html/here-docs.html
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"}}}
 set nocompatible
 set cindent
 set shiftwidth=4
@@ -665,4 +666,4 @@ let g:UltiSnipsUsePythonVersion=":py "
 
 :au FocusGained * :redraw!
 
-" vim:set et sts=2 sw=2:
+" vim: filetype=vim et sts=2 sw=2: foldmethod=marker

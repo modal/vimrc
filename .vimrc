@@ -633,7 +633,7 @@ nmap <leader>psh  :lcd %:h<CR>:!start powershell<CR>
 "Git Gui Shortcut
 "http://www.computerhope.com/starthlp.htm
 nmap <leader>ggui :!start git gui<CR>
-nmap <leader>gtk  :!start gitk<CR>
+nmap <leader>gtk  :!start gitk --all<CR>
 nmap <leader>gdiff :!start git difftool<CR>
 
 "Tortoise Hg Shortcut

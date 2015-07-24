@@ -149,6 +149,9 @@ set laststatus=2 "Always display status bar
 filetype off
 filetype plugin off
 filetype indent off
+
+au BufNewFile,BufRead *.py3 set filetype=python
+
 if has("win32")
     set shellslash
 endif

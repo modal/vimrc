@@ -110,8 +110,9 @@ set guifont=mensch:h8:cANSI
 "set guifont=Consolas:h10:cANSI
 "set guifont=BitStream_Vera_Sans_Mono:h9:cANSI
 "set printfont=Consolas:h8:cANSI
-set printfont=mensch:h8:cANSI
+set printfont=mensch:h7:cANSI
 set textwidth=80
+set printheader=
 ":digraphs to this other characters not normally enter with keyboard
 source $VIMRUNTIME/vimrc_example.vim    "What is in this?
 "source $VIMRUNTIME/mswin.vim

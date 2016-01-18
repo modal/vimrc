@@ -359,6 +359,10 @@ vnoremap <SID><Right> l
 vnoremap <SID><Up> k
 vnoremap <SID><Down> j
 
+"Escape key alternative (allsyed.com suggestion)
+imap fj <esc>
+imap jf <esc>
+
 "For literals must press ctrl+v in insert mode then type
 "exampe for enter ctrl+v then press enter
 "Map Control Up and Control Down to do buffer previous and next

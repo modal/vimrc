@@ -162,6 +162,9 @@ call pathogen#helptags()
 ":Helptags  ==> runs call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called
 
+"Can not have space gaps in wildignore
+set wildignore+=*.exe,*.zip,*.swp,*.pyc
+
 "Use HexHighlighter <leader><F2> to see hex colors
 if has('gui_running')
     colorscheme desert256

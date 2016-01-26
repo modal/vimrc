@@ -73,6 +73,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vimscript information
 ":help vim-script-info
+"http://learnvimscriptthehardway.stevelosh.com/
 "http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TODO REMEMBER TODO
@@ -677,4 +678,5 @@ let g:UltiSnipsUsePythonVersion=":py "
 
 :au FocusGained * :redraw!
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim: filetype=vim et sts=2 sw=2: foldmethod=marker

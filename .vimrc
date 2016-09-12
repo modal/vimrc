@@ -496,6 +496,7 @@ let g:showmarks_enable=0
 "endfunc
 
 "Persistent Undo (:help new-persistent-undo)
+"http://www.electricmonk.nl/log/2012/07/26/persistent-undo-history-in-vim/
 set undodir=expand('$HOME\dump')
 set undofile
 set undolevels=1000

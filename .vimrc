@@ -665,7 +665,7 @@ set grepprg=grep "\ -n
 let NERDTreeHijackNetrw=1
 
 "Set encryption method to blowfish
-set cm=blowfish
+set cm=blowfish2
 
 let g:UltiSnipsUsePythonVersion=":py "
 

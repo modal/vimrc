@@ -678,6 +678,22 @@ let g:UltiSnipsUsePythonVersion=":py "
 "
 
 :au FocusGained * :redraw!
-
+"""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+"let @a='dt,=printf("0x%04x, '
+"let @a='R=printf("0x%04x, expand("<cword>", 16))^'
+"let @a='R=printf("0x%04x, 34444))^'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! MyDivFunc()
+python << endpython
+import vim
+import string
+#vim.command("printf("%s", expand(\"<cword>\"))")
+#vim.command("echo test")
+#print dir(vim.current.line)
+#print vim.current.line
+#vim.current.line = string.upper(vim.current.line)
+endpython
+endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim: filetype=vim et sts=2 sw=2: foldmethod=marker

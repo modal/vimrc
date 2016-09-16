@@ -12,8 +12,8 @@
 "Latest Patched Binaries from Tuxproject
 "http://tuxproject.de/projects/vim/
 "
-"Patch Description List for 7.4
-"ftp://ftp.vim.org/pub/vim/patches/7.4/README
+"Patch Description List for 8.0
+"ftp://ftp.vim.org/pub/vim/patches/8.0/README
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Git Notes
 "

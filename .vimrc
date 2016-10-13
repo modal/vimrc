@@ -163,6 +163,9 @@ call pathogen#helptags()
 ":Helptags  ==> runs call pathogen#helptags()
 "Make sure plugin data is not used before pathogen functions are called
 
+"See no plugins video for more information on this.
+set path+=**
+
 "Can not have space gaps in wildignore
 set wildignore+=*.exe,*.zip,*.swp,*.pyc
 

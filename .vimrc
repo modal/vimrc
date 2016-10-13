@@ -670,7 +670,8 @@ let NERDTreeHijackNetrw=1
 "Set encryption method to blowfish
 set cm=blowfish2
 
-let g:UltiSnipsUsePythonVersion=":py "
+let g:UltiSnipsUsePythonVersion= 2
+"":py "
 
 "Add System properties shortcut WINKEY + PAUSE/Break Key
 "TODO

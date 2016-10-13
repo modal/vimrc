@@ -66,6 +66,12 @@
 "Using Vim as an external editor for Altera and Microchip
 "pathtovim/gvim.exe --servername GVIMQUART --remote-silent
 "+%l %f
+"
+"On Windows, I place ctags in c:\ctags and add it to the PATH.
+"The latest ctags can be found here.
+"https://ctags.io/
+"https://github.com/universal-ctags/ctags
+"https://ci.appveyor.com/project/masatake/ctags/branch/master <== Windows Build
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Useful Videos and Sites
 "   Derek Wyatt

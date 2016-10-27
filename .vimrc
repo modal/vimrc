@@ -12,6 +12,9 @@
 "Latest Patched Binaries from Tuxproject
 "http://tuxproject.de/projects/vim/
 "
+"Latest Patched Installer (slightly different than Tuxproject build)
+"https://github.com/vim/vim-win32-installer
+"
 "Patch Description List for 8.0
 "ftp://ftp.vim.org/pub/vim/patches/8.0/README
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

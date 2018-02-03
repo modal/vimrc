@@ -111,7 +111,11 @@ set expandtab
 "Determine unicode char by drawing it => http://shapecatcher.com/
 "set guifont=Courier\ New
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
-set guifont=mensch:h8:cANSI
+if has("win32")
+  set guifont=mensch:h8:cANSI
+elseif has("unix")
+  set guifont=DejaVu\ Sans\ Mono\ 10
+endif
 "set guifont=Inconsolata-dz:h13:cANSI
 "set guifont=Tamsyn8x17
 "set guifont=gohufont-14
@@ -120,7 +124,11 @@ set guifont=mensch:h8:cANSI
 "set guifont=Consolas:h10:cANSI
 "set guifont=BitStream_Vera_Sans_Mono:h9:cANSI
 "set printfont=Consolas:h8:cANSI
-set printfont=mensch:h7:cANSI
+if has("win32")
+  set printfont=mensch:h10:cANSI
+elseif has("unix")
+  set printfont=DejaVu\ Sans\ Mono\ 9
+endif
 set textwidth=80
 set printheader=
 ":digraphs to this other characters not normally enter with keyboard
@@ -156,21 +164,46 @@ set laststatus=2 "Always display status bar
 "Pathogen
 " have an if it exists?
 "
-"On Windows store plugins at c:\home\vimfiles\
+"On Windows store plugins at c:\home\vimfiles\bundle
+"On Unix/Linux store plugins at ~/.vim/bundle
 filetype off
 filetype plugin off
 filetype indent off
 
 au BufNewFile,BufRead *.py3 set filetype=python
 
+au Filetype vhdl setl sw=2 sts=2 ts=2 et
+au Filetype verilog setl sw=2 sts=2 ts=2 et
+au Filetype systemverilog setl sw=2 sts=2 ts=2 et
+
 if has("win32")
     set shellslash
 endif
-call pathogen#infect()
-"call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-":Helptags  ==> runs call pathogen#helptags()
-"Make sure plugin data is not used before pathogen functions are called
+
+if has("win32")
+  "If cannot drop in program files(x86)\vim\vimXX\vimfiles\autoload
+  "How to change user path, if not administrator
+  "https://superuser.com/a/165913
+  "https://support.microsoft.com/en-us/help/931715/you-cannot-modify-user-environment-variables-in-the-system-properties
+
+  so C:\home\vimfiles\pathogen.vim
+elseif has("unix")
+  so ~/.vim/pathogen.vim
+endif
+
+if 1
+  call pathogen#infect()
+  "call pathogen#runtime_append_all_bundles()
+  call pathogen#helptags()
+  ":Helptags  ==> runs call pathogen#helptags()
+  "Make sure plugin data is not used before pathogen functions are called
+endif
+
+"See no plugins video for more information on this.
+set path+=**
+
+"See no plugins video for more information on this.
+set path+=**
 
 "See no plugins video for more information on this.
 set path+=**
@@ -182,7 +215,12 @@ set wildignore+=*.exe,*.zip,*.swp,*.pyc
 if has('gui_running')
     colorscheme desert256
 else
-    colorscheme default
+  colorscheme default
+  "colorscheme desert
+  "colorscheme vividchalk
+  colorscheme evening
+  set background=dark
+  let &t_Co=256
 endif
 "darkBlue ego manuscript candyman vividchalk skittles_dark wombat torte ron
 "bluechia inkpot tango blackboard Codeblocks_dark neopro ego tortex
@@ -194,8 +232,13 @@ endif
 "highlighting tools
 "
 
-"Auto Reload _vimrc on modification
-au! BufWritePost _vimrc source %
+"Auto Reload _vimrc/.vimrc on modification
+if has('win32')
+  au! BufWritePost _vimrc source %
+elseif has('unix')
+  "TODO VERIFY THIS WORKS
+  au! BufWritePost .vimrc source %
+end
 
 "Edit vimrc
 nmap <silent> \ev :e $MYVIMRC<CR>
@@ -378,6 +421,7 @@ vnoremap <SID><Down> j
 "Escape key alternative (allsyed.com suggestion)
 imap fj <esc>
 imap jf <esc>
+"imap ii <esc>
 
 "For literals must press ctrl+v in insert mode then type
 "exampe for enter ctrl+v then press enter
@@ -467,7 +511,11 @@ nnoremap <silent> <F10> :!start /min ctags *.h *.c *.cxx *.cpp *.asm *.a51 *.py<
 nnoremap <silent> <F4> :GundoToggle<CR>
 
 "Yankring.vim Variables
-let g:yankring_history_dir = expand('$HOME\dump')
+if has("win32")
+  let g:yankring_history_dir = expand('$HOME\dump')
+elseif has("unix")
+  let g:yankring_history_dir = expand('$HOME/dump')
+endif
 nnoremap <silent> <F11> :YRShow<CR>
 
 "Shell.vim Plugin
@@ -509,7 +557,11 @@ let g:showmarks_enable=0
 
 "Persistent Undo (:help new-persistent-undo)
 "http://www.electricmonk.nl/log/2012/07/26/persistent-undo-history-in-vim/
-set undodir=expand('$HOME\dump')
+if has("win32")
+  set undodir=expand('$HOME\dump')
+elseif has("unix")
+  set undodir=expand('$HOME/dump')
+endif
 set undofile
 set undolevels=1000
 set undoreload=10000
@@ -649,7 +701,12 @@ nmap <leader>eh :!start explorer .<CR>
 nmap <leader>ehp :!start explorer ..\<CR>
 nmap <leader>epc :!start explorer c:\projects\components<CR>
 
-nmap <leader>ch :lcd %:h<CR>:!start cmd<CR>
+if has("win32")
+  nmap <leader>ch :lcd %:h<CR>:!start cmd<CR>
+elseif has("unix")
+  nmap <leader>ch :lcd %:h<CR>:!xterm bash .<CR>
+endif
+
 nmap <leader>psh  :lcd %:h<CR>:!start powershell<CR>
 
 "Git Gui Shortcut
@@ -692,10 +749,21 @@ let g:UltiSnipsUsePythonVersion= 2
 
 :au FocusGained * :redraw!
 """""""""""""""""""""""""""""""""
+"File Templates
+"https://shapeshed.com/vim-templates/
+if has ("autocmd")
+  augroup templates
+    autocmd BufNewFile *.sh 0r $home/vimfiles/bundle/templates/skeleton.sh
+    autocmd BufNewFile *.tcl 0r $home/vimfiles/bundle/templates/skeleton.tcl
+    autocmd BufNewFile *.v 0r $home/vimfiles/bundle/templates/skeleton.v
+    autocmd BufNewFile *.vhd 0r $home/vimfiles/bundle/templates/skeleton.vhd
+  augroup END
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""
 "let @a='dt,=printf("0x%04x, '
-"let @a='R=printf("0x%04x, expand("<cword>", 16))^'
-"let @a='R=printf("0x%04x, 34444))^'
+"let @a='R=printf("0x%04x, expand("<cword>", 16))
+"let @a='R=printf("0x%04x, 34444))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! MyDivFunc()
 python << endpython
@@ -708,5 +776,19 @@ import string
 #vim.current.line = string.upper(vim.current.line)
 endpython
 endfunction
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! Filecleanup()
+  "Remove Trailing Spaces
+  %s/\s\+$//ge
+  retab
+  "Fix line endings
+  %s/
+//ge
+endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Time Stamp
+nnoremap <leader>ts "=strftime("%c")<CR>p
+inoremap <leader>ts <C-R>=strftime("%c")<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim: filetype=vim et sts=2 sw=2: foldmethod=marker
